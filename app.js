@@ -6,6 +6,9 @@ $(function() {
 	//And create the needed controllers and views
 	var exampleView = new ExampleView($("#exampleView"));
 
+
+});
+
 $("#SecondPage").hide();
 $("#ladagne").hide();
 $("#Ingredient").hide();
@@ -15,6 +18,3 @@ $("table2").hide();
 $("DinnerOverview").hide();
 $("printbutton").hide();
 $("DinnerPreparation").hide();
-
-
-});
