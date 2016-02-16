@@ -1,20 +1,27 @@
+var model; 
+var exampleView;
 
-$(function() {
+$(document).ready(function() {
 	//We instantiate our model
-	var model = new DinnerModel();
+	model = new DinnerModel();
 	
 	//And create the needed controllers and views
-	var exampleView = new ExampleView($("#exampleView"));
+	exampleView = new ExampleView($("#exampleView"));
+
+	hover-div = new hover-div($("#hover-div"));
+	
+
+	$("#SecondPage").hide();
+	$("#searchArea").hide();
+	$("#ShowList").hide();
+	$("#ladagne").hide();
+	$("#Ingredient").hide();
+	$("#preparation").hide();
+	$("#SummeryHeading").hide();
+	$("#table2").hide();
+	$("#DinnerOverview").hide();
+	$("#printbutton").hide();
+	$("#DinnerPreparation").hide();
 
 
 });
-
-$("#SecondPage").hide();
-$("#ladagne").hide();
-$("#Ingredient").hide();
-$("#preparation").hide();
-$("SummeryHeading").hide();
-$("table2").hide();
-$("DinnerOverview").hide();
-$("printbutton").hide();
-$("DinnerPreparation").hide();
