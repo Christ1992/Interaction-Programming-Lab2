@@ -1,0 +1,4 @@
+function selecttype(){
+	getSelectedDish();
+	getAllDishes();
+	} 

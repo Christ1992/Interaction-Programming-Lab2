@@ -9,7 +9,9 @@ $(document).ready(function() {
 	exampleView = new ExampleView($("#exampleView"));
 
 	hover-div = new hover-div($("#hover-div"));
-	
+	SecondPage = new SecondPage($("#SecondPage").hide());
+});
+
 
 	$("#SecondPage").hide();
 	$("#searchArea").hide();
@@ -22,6 +24,3 @@ $(document).ready(function() {
 	$("#DinnerOverview").hide();
 	$("#printbutton").hide();
 	$("#DinnerPreparation").hide();
-
-
-});
