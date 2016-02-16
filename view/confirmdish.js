@@ -1,4 +1,4 @@
-function backtoselect() {
+function confirmdish() {
   $("#ladagne").hide();
   $("#Ingredient").hide();
   $("#preparation").hide();

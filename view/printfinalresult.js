@@ -1,10 +1,9 @@
 function finalresult() {
-  $("#menulist").hide();
-  $().show();
+  $("#DinnerOverview").hide();
+  $("printbutton").hide();
+  $("#DinnerPreparation").show();
 
   getAllDishes();
   getTotalMenuPrice(); 
-  getFullMenu();
   getNumberOfGuests();
-  getSelectedDish();
 }

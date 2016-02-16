@@ -8,7 +8,11 @@ $(function() {
 });
 
 $("#SecondPage").hide();
-$("#thirdpage").hide();
 $("#ladagne").hide();
 $("#Ingredient").hide();
 $("#preparation").hide();
+$("SummeryHeading").hide();
+$("table2").hide();
+$("DinnerOverview").hide();
+$("printbutton").hide();
+$("DinnerPreparation").hide();

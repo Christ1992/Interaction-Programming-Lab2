@@ -1,8 +1,12 @@
 function editmenu() {
-  $("#menulist").hide();
-  $("#SecondPage").show();
-  $("#searchArea").show();
-  $("#ShowList").show();
+	$("SummeryHeading").hide();
+	$("table2").hide();
+	$("DinnerOverview").hide();
+	$("printbutton").hide();
+	$("DinnerPreparation").hide();
+	$("#SecondPage").show();
+	$("#searchArea").show();
+	$("#ShowList").show();
 
   getAllDishes();
   getTotalMenuPrice(); 

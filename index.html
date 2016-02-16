@@ -26,19 +26,16 @@
     </div>
 
 <!--page 1 hovering square-->
-<!--
     <div class="container" id="hover-div">
             <h4>A Home Dinner Service</h4>
             <hr>
             <p>jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. <br><br>start quickly:
             </p>
-            <button id="firstbutton">Create new dinner</button>
-    </div>
--->        
+            <button id="firstbutton" onclick="createnew();">Create new dinner</button>
+    </div>      
 
 
     <!--page 2.1 & 2.2 &2.3 sidebar-->
-<!--
     <div class="container-fluid" id="SecondPage">
         <div class="row">
         <div class="col-sm-3 sidenav">
@@ -72,13 +69,10 @@
                 </tbody>
             </table>
             </div>
-            <button id="confirmDiner">Confirm Dinner</button>
+            <button id="confirmDiner" onclick="confirmdinner();">Confirm Dinner</button>
         </div>
 
--->
-
 <!--page 2.1 & 2.3  list view-->
-<!--
         <div class="col-sm-9">
               <div id="searchArea">
                 <h2>Select Dish</h2>
@@ -103,7 +97,7 @@
                 </div>
                 
               </div>
-              <div class="showList">
+              <div class="showList" id="ShowList">
                 <div class="floating-box">
                     <div> <img class="borderAll" src="./images/starter1.jpeg" alt="starter1"></div>
                     <div class="textMiddle">icecream</div>
@@ -112,7 +106,7 @@
               </div>
               <div class="showList">
                 <div class="floating-box">
-                    <div> <img class="borderAll" src="./images/starter2.jpeg" alt="starter2"></div>
+                    <div> <img class="borderAll" src="./images/starter2.jpeg" alt="starter2" onclick="icecreamdetail();"></div>
                     <div class="textMiddle">icecream</div>
                     <div style="padding: 5px;">icecreamdj kjldjslkj ;aj;ro slien ilmdhi en oskdjfi lke jslan ek ld;n ;aoeo na; ian bro najwh oalnwi nal hwf nlajsilj nal 'adjfl'a ; s</div>
                 </div>
@@ -144,15 +138,14 @@
  --> 
 
 <!--page 2.2 detial view-->
-<!--
         <div class="col-sm-9">
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-6" id="ladagne">
                     <h2>LASAGNE</h2>
                     <img src="./images/pasta.jpeg" alt="pasta">
                     <p>djldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks</p>
                     <br>
-                    <button>Back to Select Dish</button>
+                    <button onclick="backtoselect();">Back to Select Dish</button>
                 </div>
 
                 <div class="col-sm-6" id="Ingredient">
@@ -215,7 +208,7 @@
                     <hr>
                     <div class="row" style="width:100%">
                         <div class="col-sm-7">
-                            <button>Confirm Dish</button>
+                            <button onclick="confirmdish();">Confirm Dish</button>
                         </div>
                         <div style="text-align: right;"class="col-sm-3">SEK
                         </div>
@@ -226,7 +219,7 @@
             </div>
 
 
-            <div>
+            <div id="preparation">
                 <h1>PREPARATION</h1>
                 <p>djsllanl  jlajd jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. </p>
             </div>
@@ -235,7 +228,6 @@
 
 
 <!--page 3 top bar-->
-<!--
 <div class="jumbotron" style="padding:0px;margin:0px;">
     <div id="SummeryHeading">
         <div class="table1">
@@ -245,19 +237,18 @@
                 </div>
             </div>
         </div>
-        <div class="table2">
+        <div class="table2" id="table2">
             <div class="tableCell">
                 <div class="content">
-                    <button class="bigButton">Go back and edit menu</button>
+                    <button class="bigButton" onclick="editmenu();" >Go back and edit menu</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
--->
+
 
 <!--page 3.1 DinnerOverview-->
-<!--
     <div class="content" id="DinnerOverview">
     <div class="row" >
         <div class="col-md-8 borderRight" style="padding:10px; overflow:auto;height:300px" >
@@ -320,7 +311,7 @@
             
             
         </div>
-        <div class="col-md-4 bottomAlign1"style="padding-top:165px">
+        <div class="col-md-4 bottomAlign1"style="padding-top:165px" id="printbutton">
             <div class="bottomAlign2">
                 <h3>Totle:</p>
                 <h3>345.10 SEK</p>
@@ -329,13 +320,12 @@
     </div>
     <hr>
     <div class="col-md-12" style="text-align:center"> 
-            <button class="bigButton">Print Full Recipe</button>
+            <button class="bigButton" onclick="finalresult();">Print Full Recipe</button>
     </div>
     </div>
 -->
     
 <!--   page 3.2 DinnerPreparation-->
-<!--  
     <div class="container" id="DinnerPreparation">
         <div class="row padding" >
             <div class="col-md-2 ">
