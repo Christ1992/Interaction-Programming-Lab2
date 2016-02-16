@@ -1,9 +1,9 @@
 function editmenu() {
-	$("SummeryHeading").hide();
-	$("table2").hide();
-	$("DinnerOverview").hide();
-	$("printbutton").hide();
-	$("DinnerPreparation").hide();
+	$("#SummeryHeading").hide();
+	$("#table2").hide();
+	$("#DinnerOverview").hide();
+	$("#printbutton").hide();
+	$("#DinnerPreparation").hide();
 	$("#SecondPage").show();
 	$("#searchArea").show();
 	$("#ShowList").show();

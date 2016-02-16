@@ -5,10 +5,10 @@ $("#ShowList").hide();
 $("#ladagne").hide();
 $("#Ingredient").hide();
 $("#preparation").hide();
-$("SummeryHeading").show();
-$("table2").show();
-$("DinnerOverview").show();
-$("printbutton").show();
+$("#SummeryHeading").show();
+$("#table2").show();
+$("#DinnerOverview").show();
+$("#printbutton").show();
 
   getAllDishes();
   getTotalMenuPrice(); 

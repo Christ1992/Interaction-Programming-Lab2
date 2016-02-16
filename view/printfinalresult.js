@@ -1,6 +1,6 @@
 function finalresult() {
   $("#DinnerOverview").hide();
-  $("printbutton").hide();
+  $("#printbutton").hide();
   $("#DinnerPreparation").show();
 
   getAllDishes();
