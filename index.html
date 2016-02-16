@@ -11,11 +11,12 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
   <link rel="stylesheet" href="./view/stylecss.css">
-  <link rel="stylesheet" href="./view/component.css">
   
+  
+
 </head>
 
-<body>
+<body onload="initialization()">
     <div class="jumbotron" style="padding:0px;margin:0px;">
 
         <!--fixed heading-->
@@ -73,8 +74,8 @@
         </div>
 
 <!--page 2.1 & 2.3  list view-->
-        <div class="col-sm-9">
-              <div id="searchArea">
+        <div class="col-sm-9"id="searchArea">
+              <div >
                 <h2>Select Dish</h2>
                 <hr>
                 <div class="row">
@@ -138,9 +139,9 @@
  --> 
 
 <!--page 2.2 detial view-->
-        <div class="col-sm-9">
+        <div class="col-sm-9" id="detailView">
             <div class="row">
-                <div class="col-sm-6" id="ladagne">
+                <div class="col-sm-6">
                     <h2>LASAGNE</h2>
                     <img src="./images/pasta.jpeg" alt="pasta">
                     <p>djldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks</p>
@@ -228,7 +229,7 @@
 
 
 <!--page 3 top bar-->
-<div class="jumbotron" style="padding:0px;margin:0px;">
+<div class="jumbotron" id="topBar" style="padding:0px;margin:0px;">
     <div id="SummeryHeading">
         <div class="table1">
             <div class="tableCell">
@@ -250,78 +251,78 @@
 
 <!--page 3.1 DinnerOverview-->
     <div class="content" id="DinnerOverview">
-    <div class="row" >
-        <div class="col-md-8 borderRight" style="padding:10px; overflow:auto;height:300px" >
-            <div class="floating-box2 RightAlign">
-                    <div> 
-                        <img class="borderAll" src="./images/icecream.jpg" alt="icecream">
-                    </div>
-                    <div class="textMiddle">icecream
-                    </div>
-                    <div class="RightAlign" style="padding: 5px;">77.23 SEK
-                    </div>
-            </div>
-            <div class="floating-box2 RightAlign">
-                    <div> 
-                        <img class="borderAll" src="./images/icecream.jpg" alt="icecream">
-                    </div>
-                    <div class="textMiddle">icecream
-                    </div>
-                    <div class="RightAlign" style="padding: 5px;">77.23 SEK
-                    </div>
-            </div>
-            <div class="floating-box2 RightAlign">
-                    <div> 
-                        <img class="borderAll" src="./images/icecream.jpg" alt="icecream">
-                    </div>
-                    <div class="textMiddle">icecream
-                    </div>
-                    <div class="RightAlign" style="padding: 5px;">77.23 SEK
-                    </div>
-            </div>
-            
-            <div class="floating-box2 RightAlign">
-                    <div> 
-                        <img class="borderAll" src="./images/icecream.jpg" alt="icecream">
-                    </div>
-                    <div class="textMiddle">icecream
-                    </div>
-                    <div class="RightAlign" style="padding: 5px;">77.23 SEK
-                    </div>
-            </div>
-            <div class="floating-box2 RightAlign">
-                    <div> 
-                        <img class="borderAll" src="./images/icecream.jpg" alt="icecream">
-                    </div>
-                    <div class="textMiddle">icecream
-                    </div>
-                    <div class="RightAlign" style="padding: 5px;">77.23 SEK
-                    </div>
-            </div>
-            <div class="floating-box2 RightAlign">
-                    <div> 
-                        <img class="borderAll" src="./images/icecream.jpg" alt="icecream">
-                    </div>
-                    <div class="textMiddle">icecream
-                    </div>
-                    <div class="RightAlign" style="padding: 5px;">77.23 SEK
-                    </div>
-            </div>
+      <div class="row" >
+          <div class="col-md-8 borderRight" style="padding:10px; overflow:auto;height:300px" >
+              <div class="floating-box2 RightAlign">
+                      <div> 
+                          <img class="borderAll" src="./images/icecream.jpg" alt="icecream">
+                      </div>
+                      <div class="textMiddle">icecream
+                      </div>
+                      <div class="RightAlign" style="padding: 5px;">77.23 SEK
+                      </div>
+              </div>
+              <div class="floating-box2 RightAlign">
+                      <div> 
+                          <img class="borderAll" src="./images/icecream.jpg" alt="icecream">
+                      </div>
+                      <div class="textMiddle">icecream
+                      </div>
+                      <div class="RightAlign" style="padding: 5px;">77.23 SEK
+                      </div>
+              </div>
+              <div class="floating-box2 RightAlign">
+                      <div> 
+                          <img class="borderAll" src="./images/icecream.jpg" alt="icecream">
+                      </div>
+                      <div class="textMiddle">icecream
+                      </div>
+                      <div class="RightAlign" style="padding: 5px;">77.23 SEK
+                      </div>
+              </div>
+              
+              <div class="floating-box2 RightAlign">
+                      <div> 
+                          <img class="borderAll" src="./images/icecream.jpg" alt="icecream">
+                      </div>
+                      <div class="textMiddle">icecream
+                      </div>
+                      <div class="RightAlign" style="padding: 5px;">77.23 SEK
+                      </div>
+              </div>
+              <div class="floating-box2 RightAlign">
+                      <div> 
+                          <img class="borderAll" src="./images/icecream.jpg" alt="icecream">
+                      </div>
+                      <div class="textMiddle">icecream
+                      </div>
+                      <div class="RightAlign" style="padding: 5px;">77.23 SEK
+                      </div>
+              </div>
+              <div class="floating-box2 RightAlign">
+                      <div> 
+                          <img class="borderAll" src="./images/icecream.jpg" alt="icecream">
+                      </div>
+                      <div class="textMiddle">icecream
+                      </div>
+                      <div class="RightAlign" style="padding: 5px;">77.23 SEK
+                      </div>
+              </div>
 
-            
-            
-        </div>
-        <div class="col-md-4 bottomAlign1"style="padding-top:165px" id="printbutton">
-            <div class="bottomAlign2">
-                <h3>Totle:</p>
-                <h3>345.10 SEK</p>
-            </div>
-        </div>
-    </div>
-    <hr>
-    <div class="col-md-12" style="text-align:center"> 
-            <button class="bigButton" onclick="finalresult();">Print Full Recipe</button>
-    </div>
+              
+              
+          </div>
+          <div class="col-md-4 bottomAlign1"style="padding-top:165px" id="printbutton">
+              <div class="bottomAlign2">
+                  <h3>Totle:</p>
+                  <h3>345.10 SEK</p>
+              </div>
+          </div>
+      </div>
+      <hr>
+      <div class="col-md-12" style="text-align:center"> 
+              <button class="bigButton" onclick="finalresult();">Print Full Recipe</button>
+      </div>
     </div>
 -->
     
@@ -397,6 +398,7 @@
     </div>
 -->
 
+
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
@@ -416,8 +418,7 @@
     <script src="./view/printfinalresult.js"></script>
     <script src="./view/search.js"></script>
     <script src="./view/selectpeople.js"></script>
-    <script src="./view/selecttype.js"></script>
-    <script src="./view/exampleViewController.js"></script>
+    <script src="./view/selecttype.js"></script>  
 </body>
 
 </html>

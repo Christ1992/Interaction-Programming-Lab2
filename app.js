@@ -1,6 +1,6 @@
 var model; 
 var exampleView;
-
+var hoverdiv;
 $(document).ready(function() {
 	//We instantiate our model
 	model = new DinnerModel();
@@ -8,20 +8,15 @@ $(document).ready(function() {
 	//And create the needed controllers and views
 	exampleView = new ExampleView($("#exampleView"));
 
-	hover-div = new hover-div($("#hover-div"));
-	
+});
 
+var initialization;
+function initialization(){
 	$("#SecondPage").hide();
 	$("#searchArea").hide();
-	$("#ShowList").hide();
-	$("#ladagne").hide();
-	$("#Ingredient").hide();
-	$("#preparation").hide();
-	$("#SummeryHeading").hide();
-	$("#table2").hide();
+	$("#detailView").hide();
+	$("#topBar").hide();
 	$("#DinnerOverview").hide();
-	$("#printbutton").hide();
 	$("#DinnerPreparation").hide();
 
-
-});
+}
