@@ -3,7 +3,6 @@ function createnew() {
   $("#SecondPage").show();
   $("#searchArea").show();
 
-
   getFullMenu();
   getNumberOfGuests();
   getSelectedDish();
