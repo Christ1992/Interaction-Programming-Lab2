@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="./view/stylecss.css">
   
   
-<script src="./app.js"></script>
+
 </head>
 
 <body onload="initialization()">
@@ -21,7 +21,7 @@
 
         <!--fixed heading-->
         <div class="row">
-          <div class="col-md-12" id="head-Background">
+          <div class="col-md-12" id="head-Background"onclick="initialization()">
             <h1 class="marginLeft">HOMELETTE <span id="subtitle"> From the best chefs in the world directly into your kitchen.</span></h1></div>
         </div>
     </div>
@@ -35,197 +35,193 @@
             <button id="firstbutton" onclick="createnew();">Create new dinner</button>
     </div>      
 
-
-    <!--page 2.1 & 2.2 &2.3 sidebar-->
     <div class="container-fluid" id="SecondPage">
         <div class="row">
-        <div class="col-sm-3 sidenav">
-          <h2>My Dinner</h2>
-              <div class="row">
-                <div class="col-sm-3">People</div>
-                <div class="col-sm-9">
-                    <input type="number" name="points" min="0" max="100" step="1" value="1">
+       <!--page 2.1 & 2.2 &2.3 sidebar-->
+            <div class="col-sm-3 sidenav" id="sideNav">
+              <h2>My Dinner</h2>
+                  <div class="row">
+                    <div class="col-sm-3">People</div>
+                    <div class="col-sm-9">
+                        <input type="number" name="points" min="0" max="100" step="1" value="1">
+                    </div>
+                  </div>
+                  <br>
+                <div>
+                <table style="width:100%">
+                    <thead id="PriceTable">
+                        <tr>
+                          <td class="t0">Dish Name</td>
+                          <td class="t1"></td>
+                          <td class="t2">Cost</td>
+                    </thead>
+                    <tbody>
+                        <tr id="lastRow">
+                          <td class="t0">Pending</td>
+                          <td class="t1">0</td>
+                          <td class="t2">0.00</td>
+                        </tr>
+                        <tr>
+                          <td class="t0"></td>
+                          <td></td>
+                          <td id="totalPrice">0.00</td>
+                        </tr>
+                    </tbody>
+                </table>
                 </div>
-              </div>
-              <br>
-            <div>
-            <table style="width:100%">
-                <thead id="PriceTable">
-                    <tr>
-                      <td class="t0">Dish Name</td>
-                      <td class="t1"></td>
-                      <td class="t2">Cost</td>
-                </thead>
-                <tbody>
-                    <tr id="lastRow">
-                      <td class="t0">Pending</td>
-                      <td class="t1">0</td>
-                      <td class="t2">0.00</td>
-                    </tr>
-                    <tr>
-                      <td class="t0"></td>
-                      <td></td>
-                      <td id="totalPrice">0.00</td>
-                    </tr>
-                </tbody>
-            </table>
+                <button id="confirmDiner" onclick="confirmdinner();">Confirm Dinner</button>
             </div>
-            <button id="confirmDiner" onclick="confirmdinner();">Confirm Dinner</button>
-        </div>
 
-<!--page 2.1 & 2.3  list view-->
-        <div class="col-sm-9"id="searchArea">
-              <div >
-                <h2>Select Dish</h2>
-                <hr>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <form action="action_page.php">
-                        <input type="text" name="keyword">
-                        <button>search</button></div>
-                    
-                    <div class="col-sm-8">
-                        <form>
-                            <select name="courseType">
-                                <option value="Starter">Starter</option>
-                                <option value="Soup">Soup</option>
-                                <option value="Secondplat">Second plat</option>
-                                <option value="Maindish">Main dish</option>
-                                <option value="Dessert">Dessert</option>
-                                </select>
-                        </form></div>
-                    
+  <!--page 2.1 & 2.3  list view-->
+            <div class="col-sm-9"id="SearchArea">
+                <div >
+                    <h2>Select Dish</h2>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <form action="action_page.php">
+                            <input type="text" name="keyword">
+                            <button>search</button>
+                        </div>
+                        
+                        <div class="col-sm-8">
+                            <form>
+                                <select name="courseType">
+                                    <option value="Starter">Starter</option>
+                                    <option value="Soup">Soup</option>
+                                    <option value="Secondplat">Second plat</option>
+                                    <option value="Maindish">Main dish</option>
+                                    <option value="Dessert">Dessert</option>
+                                    </select>
+                              </form>
+                        </div>
+                        
+                    </div>
+                  
                 </div>
+
+                <div class="showList">
+                  <div class="floating-box" >
+                      <div> <img onclick="seeDetail();"class="borderAll" src="./images/starter1.jpeg" alt="starter1"></div>
+                      <div class="textMiddle">icecream</div>
+                      <div style="padding: 5px;">icecreamdj kjldjslkj ;aj;ro slien ilmdhi en oskdjfi lke jslan ek ld;n ;aoeo na; ian bro najwh oalnwi nal hwf nlajsilj nal 'adjfl'a ; s</div>
+                  </div>
+      
+                  <div class="floating-box">
+                      <div> <img class="borderAll" src="./images/starter2.jpeg" alt="starter2" onclick="icecreamdetail();"></div>
+                      <div class="textMiddle">icecream</div>
+                      <div style="padding: 5px;">icecreamdj kjldjslkj ;aj;ro slien ilmdhi en oskdjfi lke jslan ek ld;n ;aoeo na; ian bro najwh oalnwi nal hwf nlajsilj nal 'adjfl'a ; s</div>
+                  </div>
+                  <div class="floating-box">
+                      <div> <img class="borderAll" src="./images/starter3.jpeg" alt="starter3"></div>
+                      <div class="textMiddle">icecream</div>
+                      <div style="padding: 5px;">icecreamdj kjldjslkj ;aj;ro slien ilmdhi en oskdjfi lke jslan ek ld;n ;aoeo na; ian bro najwh oalnwi nal hwf nlajsilj nal 'adjfl'a ; s</div>
+                  </div>
+                  <div class="floating-box" >
+                      <div> <img onclick="seeDetail();"class="borderAll" src="./images/starter4.jpeg" alt="starter4"></div>
+                      <div class="textMiddle">icecream</div>
+                      <div style="padding: 5px;">icecreamdj kjldjslkj ;aj;ro slien ilmdhi en oskdjfi lke jslan ek ld;n ;aoeo na; ian bro najwh oalnwi nal hwf nlajsilj nal 'adjfl'a ; s</div>
+                  </div>
+                  <div class="floating-box" >
+                      <div> <img onclick="seeDetail();"class="borderAll" src="./images/starter5.jpeg" alt="starter5"></div>
+                      <div class="textMiddle">icecream</div>
+                      <div style="padding: 5px;">icecreamdj kjldjslkj ;aj;ro slien ilmdhi en oskdjfi lke jslan ek ld;n ;aoeo na; ian bro najwh oalnwi nal hwf nlajsilj nal 'adjfl'a ; s</div>
+                  </div>
                 
-              </div>
-              <div class="showList" id="ShowList">
-                <div class="floating-box">
-                    <div> <img class="borderAll" src="./images/starter1.jpeg" alt="starter1" onclick="icecreamdetail();"></div>
-                    <div class="textMiddle">icecream</div>
-                    <div style="padding: 5px;">icecreamdj kjldjslkj ;aj;ro slien ilmdhi en oskdjfi lke jslan ek ld;n ;aoeo na; ian bro najwh oalnwi nal hwf nlajsilj nal 'adjfl'a ; s</div>
                 </div>
-              </div>
-              <div class="showList">
-                <div class="floating-box">
-                    <div> <img class="borderAll" src="./images/starter2.jpeg" alt="starter2" onclick="icecreamdetail();"></div>
-                    <div class="textMiddle">icecream</div>
-                    <div style="padding: 5px;">icecreamdj kjldjslkj ;aj;ro slien ilmdhi en oskdjfi lke jslan ek ld;n ;aoeo na; ian bro najwh oalnwi nal hwf nlajsilj nal 'adjfl'a ; s</div>
-                </div>
-              </div>
-              <div class="showList">
-                <div class="floating-box">
-                    <div> <img class="borderAll" src="./images/starter3.jpeg" alt="starter3" onclick="icecreamdetail();"></div>
-                    <div class="textMiddle">icecream</div>
-                    <div style="padding: 5px;">icecreamdj kjldjslkj ;aj;ro slien ilmdhi en oskdjfi lke jslan ek ld;n ;aoeo na; ian bro najwh oalnwi nal hwf nlajsilj nal 'adjfl'a ; s</div>
-                </div>
-              </div>
-              <div class="showList">
-                <div class="floating-box">
-                    <div> <img class="borderAll" src="./images/starter4.jpeg" alt="starter4" onclick="icecreamdetail();"></div>
-                    <div class="textMiddle">icecream</div>
-                    <div style="padding: 5px;">icecreamdj kjldjslkj ;aj;ro slien ilmdhi en oskdjfi lke jslan ek ld;n ;aoeo na; ian bro najwh oalnwi nal hwf nlajsilj nal 'adjfl'a ; s</div>
-                </div>
-              </div>
-              <div class="showList">
-                <div class="floating-box">
-                    <div> <img class="borderAll" src="./images/starter5.jpeg" alt="starter5"></div>
-                    <div class="textMiddle">icecream</div>
-                    <div style="padding: 5px;">icecreamdj kjldjslkj ;aj;ro slien ilmdhi en oskdjfi lke jslan ek ld;n ;aoeo na; ian bro najwh oalnwi nal hwf nlajsilj nal 'adjfl'a ; s</div>
-                </div>
-              </div>
-              
-         </div>
-    </div>
- --> 
+            </div>
+         
+
 
 <!--page 2.2 detial view-->
-        <div class="col-sm-9" id="detailView">
-            <div class="row">
-                <div class="col-sm-6">
-                    <h2>LASAGNE</h2>
-                    <img src="./images/pasta.jpeg" alt="pasta">
-                    <p>djldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks</p>
-                    <br>
-                    <button onclick="backtoselect();">Back to Select Dish</button>
+            <div class="col-sm-9" id="detailView">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h2>LASAGNE</h2>
+                        <img src="./images/pasta.jpeg" alt="pasta">
+                        <p>djldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks</p>
+                        <br>
+                        <button onclick="backtoselect();">Back to Select Dish</button>
+                    </div>
+
+                    <div class="col-sm-6" id="Ingredient">
+                        <h3>INGREDIENTS FOR 4 PEOPLE</h3>
+                        <hr>
+                        <div id="ingredientTable"style="overflow: auto">
+                        <table style="width:95%; text-align: center">
+                            
+                            <tr>
+                              <td class="p0">2 tbsp</td>
+                              <td class="p1">olive oil</td>
+                              <td class="p2">SEK</td>
+                              <td class="p3">0.20</td>
+                            </tr>
+                            <tr>
+                              <td class="p0">2 tbsp</td>
+                              <td class="p1">lean beef mince</td>
+                              <td class="p2">SEK</td>
+                              <td class="p3">10.20</td>
+                            </tr>
+                            <tr>
+                              <td class="p0">2 tbsp</td>
+                              <td class="p1">pack rosclutto</td>
+                              <td class="p2">SEK</td>
+                              <td class="p3">0.20</td>
+                            </tr>
+                            <tr>
+                              <td class="p0">2 tbsp</td>
+                              <td class="p1">tomato sauce</td>
+                              <td class="p2">SEK</td>
+                              <td class="p3">10.20</td>
+                            </tr>
+                            <tr>
+                              <td class="p0">2 tbsp</td>
+                              <td class="p1">hot beef stock</td>
+                              <td class="p2">SEK</td>
+                              <td class="p3">0.20</td>
+                            </tr>
+                            <tr>
+                              <td class="p0">2 tbsp</td>
+                              <td class="p1">fresh pck lasagne sheets</td>
+                              <td class="p2">SEK</td>
+                              <td class="p3">10.20</td>
+                            </tr>
+                            <tr>
+                              <td class="p0">2 tbsp</td>
+                              <td class="p1">ball mozzarella</td>
+                              <td class="p2">SEK</td>
+                              <td class="p3">0.20</td>
+                            </tr>
+                            <tr>
+                              <td class="p0">2 tbsp</td>
+                              <td class="p1">white sauce</td>
+                              <td class="p2">SEK</td>
+                              <td class="p3">10.20</td>
+                            </tr>
+                            
+                        </table>
+                        </div>
+                        <hr>
+                        <div class="row" style="width:100%">
+                            <div class="col-sm-7">
+                                <button onclick="confirmdish();">Confirm Dish</button>
+                            </div>
+                            <div style="text-align: right;"class="col-sm-3">SEK
+                            </div>
+                            <div style="text-align: right;border:1px solid black;"class="col-sm-2">77.20
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="col-sm-6" id="Ingredient">
-                    <h3>INGREDIENTS FOR 4 PEOPLE</h3>
-                    <hr>
-                    <div id="ingredientTable"style="overflow: auto">
-                    <table style="width:95%; text-align: center">
-                        
-                        <tr>
-                          <td class="p0">2 tbsp</td>
-                          <td class="p1">olive oil</td>
-                          <td class="p2">SEK</td>
-                          <td class="p3">0.20</td>
-                        </tr>
-                        <tr>
-                          <td class="p0">2 tbsp</td>
-                          <td class="p1">lean beef mince</td>
-                          <td class="p2">SEK</td>
-                          <td class="p3">10.20</td>
-                        </tr>
-                        <tr>
-                          <td class="p0">2 tbsp</td>
-                          <td class="p1">pack rosclutto</td>
-                          <td class="p2">SEK</td>
-                          <td class="p3">0.20</td>
-                        </tr>
-                        <tr>
-                          <td class="p0">2 tbsp</td>
-                          <td class="p1">tomato sauce</td>
-                          <td class="p2">SEK</td>
-                          <td class="p3">10.20</td>
-                        </tr>
-                        <tr>
-                          <td class="p0">2 tbsp</td>
-                          <td class="p1">hot beef stock</td>
-                          <td class="p2">SEK</td>
-                          <td class="p3">0.20</td>
-                        </tr>
-                        <tr>
-                          <td class="p0">2 tbsp</td>
-                          <td class="p1">fresh pck lasagne sheets</td>
-                          <td class="p2">SEK</td>
-                          <td class="p3">10.20</td>
-                        </tr>
-                        <tr>
-                          <td class="p0">2 tbsp</td>
-                          <td class="p1">ball mozzarella</td>
-                          <td class="p2">SEK</td>
-                          <td class="p3">0.20</td>
-                        </tr>
-                        <tr>
-                          <td class="p0">2 tbsp</td>
-                          <td class="p1">white sauce</td>
-                          <td class="p2">SEK</td>
-                          <td class="p3">10.20</td>
-                        </tr>
-                        
-                    </table>
-                    </div>
-                    <hr>
-                    <div class="row" style="width:100%">
-                        <div class="col-sm-7">
-                            <button onclick="confirmdish();">Confirm Dish</button>
-                        </div>
-                        <div style="text-align: right;"class="col-sm-3">SEK
-                        </div>
-                        <div style="text-align: right;border:1px solid black;"class="col-sm-2">77.20
-                        </div>
-                    </div>
+
+                <div id="preparation">
+                    <h1>PREPARATION</h1>
+                    <p>djsllanl  jlajd jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. </p>
                 </div>
-            </div>
-
-
-            <div id="preparation">
-                <h1>PREPARATION</h1>
-                <p>djsllanl  jlajd jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. </p>
             </div>
         </div>
--->
+    </div>
 
 
 <!--page 3 top bar-->
@@ -324,7 +320,7 @@
               <button class="bigButton" onclick="finalresult();">Print Full Recipe</button>
       </div>
     </div>
--->
+
     
 <!--   page 3.2 DinnerPreparation-->
     <div class="container" id="DinnerPreparation">
@@ -373,7 +369,7 @@
                 <p>jldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjn</p>
             </div>
         </div>   
--->
+
 
 
 
@@ -407,15 +403,9 @@
     <!-- The application JavaScript code -->
     <script src="./app.js"></script>
     <script src="./model/dinnerModel.js"></script>
-    <script src="./view/backtoselect.js"></script>
-    <script src="./view/clicktodetail.js"></script>
-    <script src="./view/confirmdinner.js"></script>
-    <script src="./view/confirmdish.js"></script>
     <script src="./view/createnew.js"></script>
     <script src="./view/deletedish.js"></script>
-    <script src="./view/editmenu.js"></script>
     <script src="./view/exampleView.js"></script>
-    <script src="./view/printfinalresult.js"></script>
     <script src="./view/search.js"></script>
     <script src="./view/selectpeople.js"></script>
     <script src="./view/selecttype.js"></script>  

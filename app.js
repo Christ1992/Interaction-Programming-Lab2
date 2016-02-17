@@ -11,6 +11,7 @@ $(document).ready(function(){
 });
 
 function initialization(){
+	$("#hover-div").show();
 	$("#SecondPage").hide();
 	$("#searchArea").hide();
 	$("#detailView").hide();
