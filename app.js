@@ -7,7 +7,7 @@ $(document).ready(function(){
 	model = new DinnerModel();
 	
 	//And create the needed controllers and views
-	exampleView = new ExampleView($("#exampleView"));
+	exampleView = new ExampleView($("#exampleView"), model);
 });
 
 function initialization(){
