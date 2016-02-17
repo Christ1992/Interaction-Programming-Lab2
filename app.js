@@ -13,7 +13,7 @@ $(document).ready(function(){
 function initialization(){
 	$("#hover-div").show();
 	$("#SecondPage").hide();
-	$("#searchArea").hide();
+	$("#SearchArea").hide();
 	$("#detailView").hide();
 	$("#topBar").hide();
 	$("#DinnerOverview").hide();

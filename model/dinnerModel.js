@@ -4,6 +4,7 @@ var DinnerModel = function() {
 	var numberOfGuests = 1; //set default number of guests
 	menu['starter'] = 1; //set a starter to the menu, to use for testing
 	}
+
 	//TODO Lab 2 implement the data structure that will hold number of guest
 	// and selected dinner options for dinner menu
 
@@ -98,6 +99,16 @@ var DinnerModel = function() {
 		}
 	}
 
+	//will get the total price for the dish as argument, for one person.
+    this.getPriceForDish = function(dish) {
+        var totalPrice = 0;
+
+        dish.ingredients.forEach(function(ingredient) {
+            totalPrice += ingredient.price;
+        });
+
+        return totalPrice;
+    };
 
 	// the dishes variable contains an array of all the 
 	// dishes in the database. each dish has id, name, type,
