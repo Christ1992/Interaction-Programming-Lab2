@@ -7,7 +7,9 @@ $(document).ready(function(){
 	//We instantiate our model
 	model = new DinnerModel();
 
-	model.setNumberOfGuests(5);
+	//model.setNumberOfGuests(5);
+
+	
 	//And create the needed controllers and views
 	//var exampleView = new ExampleView($("#exampleView"), model);
 	var sideNavView = new SideNavView($("#sideNavView"), model);

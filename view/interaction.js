@@ -31,9 +31,9 @@ function confirmdinner() {
 
 /*ok*/
 function confirmdish() {
-	  $("#SecondPage").show();
-	  $("#searchArea").show();
-	  $("#detailView").hide();
+	   $("#detailView").hide();
+	   $("#searchArea").show();
+	 
 
 }
 /*ok*/

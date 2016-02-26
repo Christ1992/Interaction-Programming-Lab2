@@ -271,10 +271,10 @@ var DinnerModel = function() {
 			}]
 		},{
 		'id':100,
-		'name':'Meat balls',
+		'name':'MD 1',
 		'type':'main dish',
-		'image':'meatballs.jpg',
-		'description':"Preheat an oven to 400 degrees F (200 degrees C). Place the beef into a mixing bowl, and season with salt, onion, garlic salt, Italian seasoning, oregano, red pepper flakes, hot pepper sauce, and Worcestershire sauce; mix well. Add the milk, Parmesan cheese, and bread crumbs. Mix until evenly blended, then form into 1 1/2-inch meatballs, and place onto a baking sheet. Bake in the preheated oven until no longer pink in the center, 20 to 25 minutes.",
+		'image':'MD 1.jpg',
+		'description':"Preheat an oven to 400 degrees F (200 degrees C).  mix well. Add the milk, Parmesan cheese, and bread crumbs. Mix until evenly blended, then form into 1 1/2-inch meatballs, and place onto a baking sheet. Bake in the preheated oven until no longer pink in the center, 20 to 25 minutes.",
 		'ingredients':[{ 
 			'name':'extra lean ground beef',
 			'quantity':115,
@@ -335,12 +335,12 @@ var DinnerModel = function() {
 		'id':101,
 		'name':'MD 2',
 		'type':'main dish',
-		'image':'bakedbrie.jpg',
-		'description':"Here is how you make it... Lore ipsum...",
+		'image':'MD 2.jpg',
+		'description':"Place the beef into a mixing bowl, and season with salt, onion, garlic salt, Italian seasoning, oregano, red pepper flakes, hot pepper sauce, and Worcestershire sauce;Here is how you make it... Lore ipsum...",
 		'ingredients':[{ 
 			'name':'ingredient 1',
 			'quantity':1,
-			'unit':'pieces',
+			'unit':'pic',
 			'price':8
 			},{
 			'name':'ingredient 2',
@@ -357,12 +357,12 @@ var DinnerModel = function() {
 		'id':102,
 		'name':'MD 3',
 		'type':'main dish',
-		'image':'meatballs.jpg',
+		'image':'MD 3.jpg',
 		'description':"Here is how you make it... Lore ipsum...",
 		'ingredients':[{ 
 			'name':'ingredient 1',
 			'quantity':2,
-			'unit':'pieces',
+			'unit':'pic',
 			'price':8
 			},{
 			'name':'ingredient 2',
@@ -379,12 +379,34 @@ var DinnerModel = function() {
 		'id':103,
 		'name':'MD 4',
 		'type':'main dish',
-		'image':'meatballs.jpg',
+		'image':'MD 4.jpg',
 		'description':"Here is how you make it... Lore ipsum...",
 		'ingredients':[{ 
 			'name':'ingredient 1',
 			'quantity':1,
-			'unit':'pieces',
+			'unit':'pic',
+			'price':4
+			},{
+			'name':'ingredient 2',
+			'quantity':12,
+			'unit':'g',
+			'price':7
+			},{
+			'name':'ingredient 3',
+			'quantity':6,
+			'unit':'ml',
+			'price':4
+			}]
+		},{
+		'id':104,
+		'name':'MD 5',
+		'type':'main dish',
+		'image':'MD 5.jpg',
+		'description':"Here is how you make it... Lore ipsum...",
+		'ingredients':[{ 
+			'name':'ingredient 1',
+			'quantity':1,
+			'unit':'pic',
 			'price':4
 			},{
 			'name':'ingredient 2',
@@ -423,6 +445,42 @@ var DinnerModel = function() {
 			}]
 		},{
 		'id':202,
+		'name':'Strawberry',
+		'type':'dessert',
+		'image':'icecream.jpg',
+		'description':"Here is how you make it... Lore ipsum...",
+		'ingredients':[{ 
+			'name':'ice cream',
+			'quantity':100,
+			'unit':'ml',
+			'price':6
+			}]
+		},{
+		'id':203,
+		'name':'Chocolat Ice cream',
+		'type':'dessert',
+		'image':'icecream.jpg',
+		'description':"Here is how you make it... Lore ipsum...",
+		'ingredients':[{ 
+			'name':'ice cream',
+			'quantity':100,
+			'unit':'ml',
+			'price':6
+			}]
+		},{
+		'id':204,
+		'name':'Vanilla Ice cream',
+		'type':'dessert',
+		'image':'icecream.jpg',
+		'description':"Here is how you make it... Lore ipsum...",
+		'ingredients':[{ 
+			'name':'ice cream',
+			'quantity':100,
+			'unit':'ml',
+			'price':6
+			}]
+		},{
+		'id':205,
 		'name':'Strawberry',
 		'type':'dessert',
 		'image':'icecream.jpg',

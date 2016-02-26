@@ -11,7 +11,7 @@ var SearchArea = function (container, model) {
 	for (i = 0; i < myDishes.length; i++) { 
 		html += "<div class='floating-box' ><div><img onclick='seedetail("+myDishes[i].id+");'class='borderAll' src='./images/"+myDishes[i].image
 					+"' alt='"+myDishes[i].name+"'></div><div class='textMiddle'>"+myDishes[i].name
-					+"</div><div style='padding: 5px;'>"+myDishes[i].description+"</div></div>";
+					+"</div><div style='padding: 5px;overflow: auto;'>"+myDishes[i].description+"</div></div>";
     }
 	$("#showList").html(html);
 
