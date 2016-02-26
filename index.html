@@ -12,7 +12,6 @@
 
   <link rel="stylesheet" href="./view/stylecss.css">
   
-  
 
 </head>
 
@@ -35,46 +34,53 @@
             <button id="firstbutton" onclick="createnew();">Create new dinner</button>
     </div>      
 
+
+<!--page 2-->
+
     <div class="container-fluid" id="SecondPage">
         <div class="row">
        <!--page 2.1 & 2.2 &2.3 sidebar-->
-            <div class="col-sm-3 sidenav" id="sideNav">
+            <div class="col-sm-3 sidenav" id="sideNavView">
               <h2>My Dinner</h2>
                   <div class="row">
-                    <div class="col-sm-3">People</div>
+                    <div class="col-sm-3">People Number:</div>
                     <div class="col-sm-9">
-                        <input type="number" name="points" min="0" max="100" step="1" value="1">
+                        <button id="minusGuest" class="btn" onclick="reduceNumber();">-</button>
+
+
+                        <span id="numberOfGuests">0</span>
+
+
+
+                        <button id="plusGuest" class="btn" onclick="plusNumber();">+</button>
                     </div>
                   </div>
                   <br>
                 <div>
-                <table style="width:100%">
-                    <thead id="PriceTable">
-                        <tr>
-                          <td class="t0">Dish Name</td>
-                          <td class="t1"></td>
-                          <td class="t2">Cost</td>
-                    </thead>
-                    <tbody>
-                        <tr id="lastRow">
-                          <td class="t0">Pending</td>
-                          <td class="t1">0</td>
-                          <td class="t2">0.00</td>
-                        </tr>
-                        <tr>
-                          <td class="t0"></td>
-                          <td></td>
-                          <td id="totalPrice">0.00</td>
-                        </tr>
-                    </tbody>
-                </table>
+                    <div class="row" id="PriceTable">
+                        <div class="col-sm-8">Dish Name</div>
+                        <div class="col-sm-4">Cost</div>
+                        <div class="row" id="PriceTable">
+                          <div class="col-sm-8" id="starterMenu"></div>
+                          <div class="col-sm-4" id="starterCost">remove function</div>
+                          <div class="col-sm-8" id="mainMenu"></div>
+                          <div class="col-sm-4" id="mainCost">remove function</div>
+                          <div class="col-sm-8" id="dessertMenu"></div>
+                          <div class="col-sm-4" id="dessertCost">remove function</div>
+                          <div class="col-sm-8">Total:</div>
+                          <div class="col-sm-4" id="totalCost"></div>
+                        </div>
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-8"><button id="confirmDinner" onclick="confirmdinner();">Confirm Dinner</button></div>
+                        <div class="col-sm-1"></div>
+                    </div>
                 </div>
-                <button id="confirmDiner" onclick="confirmdinner();">Confirm Dinner</button>
+                
             </div>
 
   <!--page 2.1 & 2.3  list view-->
             <div class="col-sm-9"id="SearchArea">
-                <div >
+                <div id="selectDish">
                     <h2>Select Dish</h2>
                     <hr>
                     <div class="row">
@@ -100,13 +106,13 @@
 
                 <div class="showList">
                   <div class="floating-box" >
-                      <div> <img onclick="seeDetail();"class="borderAll" src="./images/starter1.jpeg" alt="starter1"></div>
+                      <div> <img onclick="seedetail();"class="borderAll" src="./images/starter1.jpeg" alt="starter1"></div>
                       <div class="textMiddle">icecream</div>
                       <div style="padding: 5px;">icecreamdj kjldjslkj ;aj;ro slien ilmdhi en oskdjfi lke jslan ek ld;n ;aoeo na; ian bro najwh oalnwi nal hwf nlajsilj nal 'adjfl'a ; s</div>
                   </div>
       
                   <div class="floating-box">
-                      <div> <img class="borderAll" src="./images/starter2.jpeg" alt="starter2" onclick="icecreamdetail();"></div>
+                      <div> <img class="borderAll" src="./images/starter2.jpeg" alt="starter2" onclick="seedetail();"></div>
                       <div class="textMiddle">icecream</div>
                       <div style="padding: 5px;">icecreamdj kjldjslkj ;aj;ro slien ilmdhi en oskdjfi lke jslan ek ld;n ;aoeo na; ian bro najwh oalnwi nal hwf nlajsilj nal 'adjfl'a ; s</div>
                   </div>
@@ -116,12 +122,12 @@
                       <div style="padding: 5px;">icecreamdj kjldjslkj ;aj;ro slien ilmdhi en oskdjfi lke jslan ek ld;n ;aoeo na; ian bro najwh oalnwi nal hwf nlajsilj nal 'adjfl'a ; s</div>
                   </div>
                   <div class="floating-box" >
-                      <div> <img onclick="seeDetail();"class="borderAll" src="./images/starter4.jpeg" alt="starter4"></div>
+                      <div> <img onclick="seedetail();"class="borderAll" src="./images/starter4.jpeg" alt="starter4"></div>
                       <div class="textMiddle">icecream</div>
                       <div style="padding: 5px;">icecreamdj kjldjslkj ;aj;ro slien ilmdhi en oskdjfi lke jslan ek ld;n ;aoeo na; ian bro najwh oalnwi nal hwf nlajsilj nal 'adjfl'a ; s</div>
                   </div>
                   <div class="floating-box" >
-                      <div> <img onclick="seeDetail();"class="borderAll" src="./images/starter5.jpeg" alt="starter5"></div>
+                      <div> <img onclick="seedetail();"class="borderAll" src="./images/starter5.jpeg" alt="starter5"></div>
                       <div class="textMiddle">icecream</div>
                       <div style="padding: 5px;">icecreamdj kjldjslkj ;aj;ro slien ilmdhi en oskdjfi lke jslan ek ld;n ;aoeo na; ian bro najwh oalnwi nal hwf nlajsilj nal 'adjfl'a ; s</div>
                   </div>
@@ -206,7 +212,7 @@
                             </div>
                             <div style="text-align: right;"class="col-sm-3">SEK
                             </div>
-                            <div style="text-align: right;border:1px solid black;"class="col-sm-2">77.20
+                            <div style="text-align: right;border:1px solid black;"class="col-sm-2" id="ingredientTotal">77.20
                             </div>
                         </div>
                     </div>
@@ -228,7 +234,7 @@
         <div class="table1">
             <div class="tableCell">
                 <div class="content">
-                    <h2>My Dinner: 4 people</h2>
+                    <h2>My Dinner: <span id="numberOfGuests">4 </span> people</h2>
                 </div>
             </div>
         </div>
@@ -246,7 +252,7 @@
 <!--page 3.1 DinnerOverview-->
     <div class="content" id="DinnerOverview">
       <div class="row" >
-          <div class="col-md-8 borderRight" style="padding:10px; overflow:auto;height:300px" >
+          <div class="col-md-8 borderRight" id="dinnerAll"style="padding:10px; overflow:auto;height:300px" >
               <div class="floating-box2 RightAlign">
                       <div> 
                           <img class="borderAll" src="./images/icecream.jpg" alt="icecream">
@@ -306,8 +312,8 @@
               
               
           </div>
-          <div class="col-md-4 bottomAlign1"style="padding-top:165px" id="printbutton">
-              <div class="bottomAlign2">
+          <div class="col-md-4 bottomAlign1"style="padding-top:165px" >
+              <div class="bottomAlign2" id="printButton">
                   <h3>Totle:</p>
                   <h3>345.10 SEK</p>
               </div>
@@ -395,18 +401,18 @@
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
+ 
     <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 
     <!-- The application JavaScript code -->
-    <script src="./app.js"></script>
-    <script src="./model/dinnerModel.js"></script>
+     <script src="./app.js"></script>
+  <script src="./model/dinnerModel.js"></script>
+    
     <script src="./view/interaction.js"></script>
-    <script src="./view/deletedish.js"></script>
-    <script src="./view/exampleView.js"></script>
-    <script src="./view/search.js"></script>
-    <script src="./view/selectpeople.js"></script>
-    <script src="./view/selecttype.js"></script>  
+    <script src="./view/sideNavView.js"></script>
+    <script src="./view/searchArea.js"></script>
+    
 </body>
 
 </html>

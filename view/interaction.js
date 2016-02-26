@@ -3,19 +3,14 @@ function createnew() {
   $("#hover-div").hide();
   $("#SecondPage").show();
   $("#SearchArea").show();
-
-  getFullMenu();
-  getNumberOfGuests();
-  getSelectedDish();
+  
 }
 
 /*ok*/
-function seeDetail(){
+function seedetail(){
 	$("#SearchArea").hide();
 	$("#detailView").show();
-	getAllIngredients();
-	getNumberOfGuests();
-	getAllDishes();
+
 	} 
 
 /*ok*/
@@ -23,11 +18,6 @@ function backtoselect() {
   $("#detailView").hide();
   $("#SearchArea").show();
 
-  getAllDishes();
-  getTotalMenuPrice(); 
-  getFullMenu();
-  getNumberOfGuests();
-  getSelectedDish();
 }
 
 /*ok*/
@@ -36,12 +26,6 @@ function confirmdinner() {
 	$("#topBar").show();
 	$("#DinnerOverview").show();
 	
-
-	  getAllDishes();
-	  getTotalMenuPrice(); 
-	  getFullMenu();
-	  getNumberOfGuests();
-	  getSelectedDish();
 }	
 
 /*ok*/
@@ -50,12 +34,6 @@ function confirmdish() {
 	  $("#SearchArea").show();
 	  $("#detailView").hide();
 
-	  addDishToMenu();
-	  getAllDishes();
-	  getTotalMenuPrice(); 
-	  getFullMenu();
-	  getNumberOfGuests();
-	  getSelectedDish();
 }
 /*ok*/
 function editmenu() {
@@ -67,11 +45,6 @@ function editmenu() {
 	$("#searchArea").show();
 	$("#ShowList").show();
 
-	  getAllDishes();
-	  getTotalMenuPrice(); 
-	  getFullMenu();
-	  getNumberOfGuests();
-	  getSelectedDish();
 }
 
 /*ok*/
@@ -80,9 +53,5 @@ function finalresult() {
   $("#DinnerPreparation").show();
   $("#topBar").show();
 
-  
-
-  getAllDishes();
-  getTotalMenuPrice(); 
-  getNumberOfGuests();
+ 
 }

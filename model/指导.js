@@ -1,31 +1,73 @@
 //DinnerModel Object constructor
 var DinnerModel = function() {
-	var menu = [];
-	numberOfGuests = 1; //set default number of guests
-	menu['starter'] = 2; //set a starter to the menu, to use for testing
-	
-
+ 
 	//TODO Lab 2 implement the data structure that will hold number of guest
 	// and selected dinner options for dinner menu
-	
-	//ok
+
+var numberOFGuests=1;
 	this.setNumberOfGuests = function(num) {
-		
-			numberOfGuests = num;
-			
-			//TODO Lab 2
-		
+		//TODO Lab 2 用来得出人数
 	}
 
-	//ok
 	// should return 
 	this.getNumberOfGuests = function() {
-			console.log(numberOfGuests);
-			return numberOfGuests;
+		//TODO Lab 2 用来输出人数
 	}
-	
-	//function that returns a dish of specific ID
-	//ok
+
+	//Returns the dish that is on the menu for selected type 
+	this.getSelectedDish = function(type) {
+		//TODO Lab 2 得到选择类型的菜
+	}
+
+	//Returns all the dishes on the menu.
+	this.getFullMenu = function() {
+		//TODO Lab 2	输出所有的菜和价格
+	}
+
+	//Returns all ingredients for all the dishes on the menu.
+	this.getAllIngredients = function() {
+		//TODO Lab 2	输出所有的成分和价格
+	}
+
+	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
+	this.getTotalMenuPrice = function() {
+		//TODO Lab 2	得出总价
+	}
+
+	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
+	//it is removed from the menu and the new one added.
+	this.addDishToMenu = function(id) {
+		//TODO Lab 2 	添加id
+	}
+
+	//Removes dish from menu
+	this.removeDishFromMenu = function(id) {
+		//TODO Lab 2	移除所选id
+	}
+
+	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
+	//you can use the filter argument to filter out the dish by name or ingredient (use for search)
+	//if you don't pass any filter all the dishes will be returned  筛选
+	this.getAllDishes = function (type,filter) {
+	  return $(dishes).filter(function(index,d) {
+		var found = true;
+		if(filter){
+			found = false;
+			$.each(d.ingredients,function(index,ingredient) {
+				if(ingredient.name.indexOf(filter)!=-1) {
+					found = true;
+				}
+			});
+			if(d.name.indexOf(filter) != -1)
+			{
+				found = true;
+			}
+		}
+	  	return d.type == type && found;
+	  });	
+	}
+
+	//function that returns a dish of specific ID   用id能得到对应菜的数组
 	this.getDish = function (id) {
 	  for(key in dishes){
 			if(dishes[key].id == id) {
@@ -34,104 +76,6 @@ var DinnerModel = function() {
 		}
 	}
 
-	//Returns the dish that is on the menu for selected type 
-	//ok
-	this.getSelectedDish = function(type) {
-			console.log(menu);
-			var selectedDish = [];
-			for (key in menu){
-				var dish = this.getDish(menu[key]);
-				if(dish.type==type){
-					selectedDish.push(dish);
-				}
-			
-			}
-				return menu[type];//TODO Lab 2
-
-	}
-	
-	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
-	//you can use the filter argument to filter out the dish by name or ingredient (use for search)
-	//if you don't pass any filter all the dishes will be returned
-	this.getAllDishes = function (type,filter) {
-	  console.log("hi");
-	  return $(dishes).filter(function(index,dish) {
-		
-		var found = true;
-		if(filter){
-			found = false;
-			$.each(dish.ingredients,function(index,ingredient) {
-				if(ingredient.name.indexOf(filter)!=-1) {
-					found = true;
-				}
-			});
-			if(dish.name.indexOf(filter) != -1)
-			{
-				found = true;
-			}
-		}
-
-	  	return dish.type == type && found;
-	  })	
-	}
-
-	//Returns all the dishes on the menu.
-	this.getFullMenu = function() {
-		var menuDishes = [];
-		for(key in menu) {
-			menuDishes.push(this.getDish(menu[key]));
-		}
-		return menuDishes;//TODO Lab 2
-	}
-
-	//Returns all ingredients for all the dishes on the menu.
-	this.getAllIngredients = function() {
-		var ingredients = [];
-		for(key in menu) {
-			var dish = this.getDish(menu[key]);
-			ingredients = ingredients.concat(dish.ingredients);
-		}
-		return ingredients//TODO Lab 2
-	}
-
-	this.getPriceForDish = function(dish) {
-        var totalPrice = 0;
-        dish.ingredients.forEach(function(ingredient) {
-        	totalPrice += ingredient.price;
-        });
-        console.log(totalPrice);
-        return totalPrice;
-
-    };
-
-	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
-	this.getTotalMenuPrice = function() {
-		var ingredients = this.getAllIngredients();
-		var sum = 0.;
-		for(key in ingredients) {
-			sum += parseFloat(ingredients[key].price) * this.getNumberOfGuests();
-		}
-		return sum;//TODO Lab 2
-	}
-
-	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
-	//it is removed from the menu and the new one added.
-	this.addDishToMenu = function(id) {
-		menu[this.getDish(id).type] = id; //TODO Lab 2 
-	}
-
-	//Removes dish from menu
-	this.removeDishFromMenu = function(id) {
-		var type = this.getDish(id).type;
-		if(menu[type] == id) {
-			delete menu[type]//TODO Lab 2
-	}
-
-	
-
-}}	
-	//will get the total price for the dish as argument, for one person.
-    
 
 	// the dishes variable contains an array of all the 
 	// dishes in the database. each dish has id, name, type,
@@ -141,6 +85,7 @@ var DinnerModel = function() {
 	// defining the unit i.e. "g", "slices", "ml". Unit
 	// can sometimes be empty like in the example of eggs where
 	// you just say "5 eggs" and not "5 pieces of eggs" or anything else.
+	//组成：id,名字，类型，图片，描述，成分数组
 	var dishes = [{
 		'id':1,
 		'name':'French toast',
@@ -384,5 +329,4 @@ var DinnerModel = function() {
 		}
 	];
 
-
-
+}
