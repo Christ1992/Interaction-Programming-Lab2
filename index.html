@@ -91,13 +91,13 @@
                         </div>
                         
                         <div class="col-sm-8">
-                            <form>
-                                <select name="courseType">
-                                    <option value="Starter">Starter</option>
-                                    <option value="Maindish">Main dish</option>
-                                    <option value="Dessert">Dessert</option>
+                            
+                                <select id="courseType" onChange="changevalue()">
+                                    <option value="starter">Starter</option>
+                                    <option value="main dish">Main dish</option>
+                                    <option value="dessert">Dessert</option>
                                     </select>
-                              </form>
+                              
                         </div>
                         
                     </div>
@@ -105,33 +105,7 @@
                 </div>
 
                 <div class="showList">
-                  <div class="floating-box" >
-                      <div> <img onclick="seedetail();"class="borderAll" src="./images/starter1.jpeg" alt="starter1"></div>
-                      <div class="textMiddle">icecream</div>
-                      <div style="padding: 5px;">icecreamdj kjldjslkj ;aj;ro slien ilmdhi en oskdjfi lke jslan ek ld;n ;aoeo na; ian bro najwh oalnwi nal hwf nlajsilj nal 'adjfl'a ; s</div>
-                  </div>
-      
-                  <div class="floating-box">
-                      <div> <img class="borderAll" src="./images/starter2.jpeg" alt="starter2" onclick="seedetail();"></div>
-                      <div class="textMiddle">icecream</div>
-                      <div style="padding: 5px;">icecreamdj kjldjslkj ;aj;ro slien ilmdhi en oskdjfi lke jslan ek ld;n ;aoeo na; ian bro najwh oalnwi nal hwf nlajsilj nal 'adjfl'a ; s</div>
-                  </div>
-                  <div class="floating-box">
-                      <div> <img class="borderAll" src="./images/starter3.jpeg" alt="starter3"></div>
-                      <div class="textMiddle">icecream</div>
-                      <div style="padding: 5px;">icecreamdj kjldjslkj ;aj;ro slien ilmdhi en oskdjfi lke jslan ek ld;n ;aoeo na; ian bro najwh oalnwi nal hwf nlajsilj nal 'adjfl'a ; s</div>
-                  </div>
-                  <div class="floating-box" >
-                      <div> <img onclick="seedetail();"class="borderAll" src="./images/starter4.jpeg" alt="starter4"></div>
-                      <div class="textMiddle">icecream</div>
-                      <div style="padding: 5px;">icecreamdj kjldjslkj ;aj;ro slien ilmdhi en oskdjfi lke jslan ek ld;n ;aoeo na; ian bro najwh oalnwi nal hwf nlajsilj nal 'adjfl'a ; s</div>
-                  </div>
-                  <div class="floating-box" >
-                      <div> <img onclick="seedetail();"class="borderAll" src="./images/starter5.jpeg" alt="starter5"></div>
-                      <div class="textMiddle">icecream</div>
-                      <div style="padding: 5px;">icecreamdj kjldjslkj ;aj;ro slien ilmdhi en oskdjfi lke jslan ek ld;n ;aoeo na; ian bro najwh oalnwi nal hwf nlajsilj nal 'adjfl'a ; s</div>
-                  </div>
-                
+                  
                 </div>
             </div>
          
@@ -230,11 +204,11 @@
 
 <!--page 3 top bar-->
 <div class="jumbotron" id="topBar" style="padding:0px;margin:0px;">
-    <div id="SummeryHeading">
+    <div id="summeryHeading">
         <div class="table1">
             <div class="tableCell">
                 <div class="content">
-                    <h2>My Dinner: <span id="numberOfGuests">4 </span> people</h2>
+                    <h2>My Dinner: <span id="totalNum">4 </span> people</h2>
                 </div>
             </div>
         </div>
@@ -412,6 +386,7 @@
     <script src="./view/interaction.js"></script>
     <script src="./view/sideNavView.js"></script>
     <script src="./view/searchArea.js"></script>
+    <script src="./view/summaryHeading.js"></script>
     
 </body>
 

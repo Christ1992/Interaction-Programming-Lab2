@@ -1,5 +1,6 @@
 
 var model;
+var courseTemp='starter';
 
 //var initialization;
 $(document).ready(function(){
@@ -11,7 +12,7 @@ $(document).ready(function(){
 	//var exampleView = new ExampleView($("#exampleView"), model);
 	var sideNavView = new SideNavView($("#sideNavView"), model);
 	var searchArea = new SearchArea($("#searchArea"), model);
-
+	var summaryHeading= new SummaryHeading($("#summaryHeading"),model);
 });
 
 function initialization(){

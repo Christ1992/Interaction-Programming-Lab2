@@ -49,7 +49,6 @@ var DinnerModel = function() {
 				return menu[type];//TODO Lab 2
 
 	}
-	
 	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
 	//you can use the filter argument to filter out the dish by name or ingredient (use for search)
 	//if you don't pass any filter all the dishes will be returned
