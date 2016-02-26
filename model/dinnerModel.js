@@ -2,7 +2,7 @@
 var DinnerModel = function() {
 	var menu = [];
 	numberOfGuests = 1; //set default number of guests
-	menu['starter'] = 2; //set a starter to the menu, to use for testing
+	menu['main dish'] = 102; //set a starter to the menu, to use for testing
 	
 
 	//TODO Lab 2 implement the data structure that will hold number of guest
@@ -141,10 +141,10 @@ var DinnerModel = function() {
 	// you just say "5 eggs" and not "5 pieces of eggs" or anything else.
 	var dishes = [{
 		'id':1,
-		'name':'French toast',
+		'name':'starter 1',
 		'type':'starter',
-		'image':'toast.jpg',
-		'description':"In a large mixing bowl, beat the eggs. Add the milk, brown sugar and nutmeg; stir well to combine. Soak bread slices in the egg mixture until saturated. Heat a lightly oiled griddle or frying pan over medium high heat. Brown slices on both sides, sprinkle with cinnamon and serve hot.",
+		'image':'starter1.jpeg',
+		'description':"In a large mixing bowl, beat the eggs. Add the milk, brown sugar and nutmeg; stir well to combine. Soak bread slices in the egg mixture until saturated. ",
 		'ingredients':[{ 
 			'name':'eggs',
 			'quantity':0.5,
@@ -173,9 +173,9 @@ var DinnerModel = function() {
 			}]
 		},{
 		'id':2,
-		'name':'Sourdough Starter',
+		'name':'starter 2',
 		'type':'starter',
-		'image':'sourdough.jpg',
+		'image':'starter2.jpeg',
 		'description':"Here is how you make it... Lore ipsum...",
 		'ingredients':[{ 
 			'name':'active dry yeast',
@@ -195,9 +195,63 @@ var DinnerModel = function() {
 			}]
 		},{
 		'id':3,
-		'name':'Baked Brie with Peaches',
+		'name':'starter 3',
 		'type':'starter',
-		'image':'bakedbrie.jpg',
+		'image':'starter3.jpeg',
+		'description':"Here is how you make it... Lore ipsum...",
+		'ingredients':[{ 
+			'name':'round Brie cheese',
+			'quantity':10,
+			'unit':'g',
+			'price':8
+			},{
+			'name':'raspberry preserves',
+			'quantity':15,
+			'unit':'g',
+			'price':10
+			},{
+			'name':'peaches',
+			'quantity':1,
+			'unit':'',
+			'price':4
+			}]
+		},{
+		'id':4,
+		'name':'starter 4',
+		'type':'starter',
+		'image':'starter4.jpeg',
+		'description':"In a large mixing bowl, beat the eggs. Add the milk, brown sugar and nutmeg; stir well to combine. Soak bread slices in the egg mixture until saturated.",
+		'ingredients':[{ 
+			'name':'eggs',
+			'quantity':0.5,
+			'unit':'',
+			'price':10
+			},{
+			'name':'milk',
+			'quantity':30,
+			'unit':'ml',
+			'price':6
+			},{
+			'name':'brown sugar',
+			'quantity':7,
+			'unit':'g',
+			'price':1
+			},{
+			'name':'ground nutmeg',
+			'quantity':0.5,
+			'unit':'g',
+			'price':12
+			},{
+			'name':'white bread',
+			'quantity':2,
+			'unit':'slices',
+			'price':2
+			}]
+		},{
+		'id':5,
+		'name':'starter 5',
+		'type':'starter',
+		'image':'starter5.jpeg',
 		'description':"Here is how you make it... Lore ipsum...",
 		'ingredients':[{ 
 			'name':'round Brie cheese',

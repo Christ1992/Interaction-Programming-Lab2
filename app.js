@@ -14,6 +14,8 @@ $(document).ready(function(){
 	var searchArea = new SearchArea($("#searchArea"), model);
 	var topBar= new TopBar($("#topBar"),model);
 	var dinnerOverview= new DinnerOverview($("#dinnerOverview"),model);
+	//var detailView= new DetailView($("#detailView"),model,identifier);
+
 });
 
 function initialization(){

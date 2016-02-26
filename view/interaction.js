@@ -7,10 +7,10 @@ function createnew() {
 }
 
 /*ok*/
-function seedetail(){
+function seedetail(id){
 	$("#searchArea").hide();
 	$("#detailView").show();
-
+	DetailView($("#detailView"),model,id);
 	} 
 
 /*ok*/

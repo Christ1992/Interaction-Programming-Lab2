@@ -114,7 +114,7 @@
 <!--page 2.2 detial view-->
             <div class="col-sm-9" id="detailView">
                 <div class="row">
-                    <div class="col-sm-6">
+                    <div class="col-sm-6" id="detailDish">
                         <h2>LASAGNE</h2>
                         <img src="./images/pasta.jpeg" alt="pasta">
                         <p>djldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks. jdjldjlf jljelj ljbekl jla;lheoim n kaldn khsnekj bsikebjghabjg ,hgdn len lsneu nknalble kjndbkie nks ksjh tmecje j sem j mslem ks</p>
@@ -123,61 +123,15 @@
                     </div>
 
                     <div class="col-sm-6" id="Ingredient">
-                        <h3>INGREDIENTS FOR 4 PEOPLE</h3>
+                        <h3>INGREDIENTS FOR One  Dish</h3>
                         <hr>
-                        <div id="ingredientTable"style="overflow: auto">
-                        <table style="width:95%; text-align: center">
-                            
-                            <tr>
-                              <td class="p0">2 tbsp</td>
-                              <td class="p1">olive oil</td>
-                              <td class="p2">SEK</td>
-                              <td class="p3">0.20</td>
-                            </tr>
-                            <tr>
-                              <td class="p0">2 tbsp</td>
-                              <td class="p1">lean beef mince</td>
-                              <td class="p2">SEK</td>
-                              <td class="p3">10.20</td>
-                            </tr>
-                            <tr>
-                              <td class="p0">2 tbsp</td>
-                              <td class="p1">pack rosclutto</td>
-                              <td class="p2">SEK</td>
-                              <td class="p3">0.20</td>
-                            </tr>
-                            <tr>
-                              <td class="p0">2 tbsp</td>
-                              <td class="p1">tomato sauce</td>
-                              <td class="p2">SEK</td>
-                              <td class="p3">10.20</td>
-                            </tr>
-                            <tr>
-                              <td class="p0">2 tbsp</td>
-                              <td class="p1">hot beef stock</td>
-                              <td class="p2">SEK</td>
-                              <td class="p3">0.20</td>
-                            </tr>
-                            <tr>
-                              <td class="p0">2 tbsp</td>
-                              <td class="p1">fresh pck lasagne sheets</td>
-                              <td class="p2">SEK</td>
-                              <td class="p3">10.20</td>
-                            </tr>
-                            <tr>
-                              <td class="p0">2 tbsp</td>
-                              <td class="p1">ball mozzarella</td>
-                              <td class="p2">SEK</td>
-                              <td class="p3">0.20</td>
-                            </tr>
-                            <tr>
-                              <td class="p0">2 tbsp</td>
-                              <td class="p1">white sauce</td>
-                              <td class="p2">SEK</td>
-                              <td class="p3">10.20</td>
-                            </tr>
-                            
-                        </table>
+                        <div style="overflow: auto">
+                          <div class="row" id="ingredientTable">
+                                <div class="col-md-2">2 tbsp</div>
+                                <div class="col-md-6">olive oil</div>
+                                <div class="col-md-2">SEK</div>
+                                <div class="col-md-2">0.2</div>
+                          </div>
                         </div>
                         <hr>
                         <div class="row" style="width:100%">
@@ -322,6 +276,8 @@
     <script src="./view/searchArea.js"></script>
     <script src="./view/topBar.js"></script>
     <script src="./view/dinnerOverview.js"></script>
+    <script src="./view/detailView.js"></script>
+
     
 </body>
 
