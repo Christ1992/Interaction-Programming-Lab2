@@ -2,87 +2,57 @@
 function createnew() {
   $("#hover-div").hide();
   $("#SecondPage").show();
-  $("#SearchArea").show();
-
-  getFullMenu();
-  getNumberOfGuests();
-  getSelectedDish();
+  $("#searchArea").show();
+  
 }
 
 /*ok*/
-function seeDetail(){
-	$("#SearchArea").hide();
+function seedetail(id){
+	$("#searchArea").hide();
 	$("#detailView").show();
-	getAllIngredients();
-	getNumberOfGuests();
-	getAllDishes();
+	DetailView($("#detailView"),model,id);
 	} 
 
 /*ok*/
 function backtoselect() {
   $("#detailView").hide();
-  $("#SearchArea").show();
+  $("#searchArea").show();
 
-  getAllDishes();
-  getTotalMenuPrice(); 
-  getFullMenu();
-  getNumberOfGuests();
-  getSelectedDish();
 }
 
 /*ok*/
 function confirmdinner() {
 	$("#SecondPage").hide();
 	$("#topBar").show();
-	$("#DinnerOverview").show();
+	$("#dinnerOverview").show();
+	DinnerOverview("#dinnerOverview",model);
 	
-
-	  getAllDishes();
-	  getTotalMenuPrice(); 
-	  getFullMenu();
-	  getNumberOfGuests();
-	  getSelectedDish();
 }	
 
 /*ok*/
 function confirmdish() {
-	  $("#SecondPage").show();
-	  $("#SearchArea").show();
-	  $("#detailView").hide();
+	   $("#detailView").hide();
+	   $("#searchArea").show();
+	 
 
-	  addDishToMenu();
-	  getAllDishes();
-	  getTotalMenuPrice(); 
-	  getFullMenu();
-	  getNumberOfGuests();
-	  getSelectedDish();
 }
 /*ok*/
 function editmenu() {
 	
 	$("#topBar").hide();
-	$("#DinnerOverview").hide();
+	$("#dinnerOverview").hide();
 	$("#DinnerPreparation").hide();
 	$("#SecondPage").show();
 	$("#searchArea").show();
-	$("#ShowList").show();
+	$("#showList").show();
 
-	  getAllDishes();
-	  getTotalMenuPrice(); 
-	  getFullMenu();
-	  getNumberOfGuests();
-	  getSelectedDish();
 }
 
 /*ok*/
 function finalresult() {
-  $("#DinnerOverview").hide();
+  $("#dinnerOverview").hide();
   $("#DinnerPreparation").show();
   $("#topBar").show();
 
-  
-
-  getAllDishes();
-  getTotalMenuPrice(); 
-  getNumberOfGuests();
+ 
 }
