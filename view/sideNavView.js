@@ -38,8 +38,8 @@ var SideNavView = function (container, model) {
   //	function	reduceNumber();
   //	function	plusNumber();
  
-function reduceNumber(){numberOfGuests=numberOfGuests-1; SideNavView($("#sideNavView"), model);SummaryHeading($("#summaryHeading"),model);}
-function plusNumber(){numberOfGuests =numberOfGuests+1;	SideNavView($("#sideNavView"), model); SummaryHeading($("#summaryHeading"),model);}
+function reduceNumber(){numberOfGuests=numberOfGuests-1; SideNavView($("#sideNavView"), model);TopBar($("#summaryHeading"),model);}
+function plusNumber(){numberOfGuests =numberOfGuests+1;	SideNavView($("#sideNavView"), model); TopBar($("#summaryHeading"),model);}
 
 
 

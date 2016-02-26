@@ -20,7 +20,7 @@ var DinnerModel = function() {
 	//ok
 	// should return 
 	this.getNumberOfGuests = function() {
-			console.log(numberOfGuests);
+			//console.log(numberOfGuests);
 			return numberOfGuests;
 	}
 	
@@ -37,7 +37,6 @@ var DinnerModel = function() {
 	//Returns the dish that is on the menu for selected type 
 	//ok
 	this.getSelectedDish = function(type) {
-			console.log(menu);
 			var selectedDish = [];
 			for (key in menu){
 				var dish = this.getDish(menu[key]);
@@ -53,7 +52,7 @@ var DinnerModel = function() {
 	//you can use the filter argument to filter out the dish by name or ingredient (use for search)
 	//if you don't pass any filter all the dishes will be returned
 	this.getAllDishes = function (type,filter) {
-	  console.log("hi");
+	  //console.log("hi");
 	  return $(dishes).filter(function(index,dish) {
 		
 		var found = true;
@@ -98,7 +97,7 @@ var DinnerModel = function() {
         dish.ingredients.forEach(function(ingredient) {
         	totalPrice += ingredient.price;
         });
-        console.log(totalPrice);
+        //console.log(totalPrice);
         return totalPrice;
 
     };

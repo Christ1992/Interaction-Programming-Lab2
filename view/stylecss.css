@@ -263,7 +263,7 @@ select{
 			*top: -50%;
 			*left: -50%;
 		}
-		#SummeryHeading{
+		#summaryHeading{
 			height:100px;
 			background-color:#FFFFCC;
 			border-bottom:2px solid black;

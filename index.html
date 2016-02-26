@@ -79,13 +79,13 @@
             </div>
 
   <!--page 2.1 & 2.3  list view-->
-            <div class="col-sm-9"id="SearchArea">
+            <div class="col-sm-9"id="searchArea">
                 <div id="selectDish">
                     <h2>Select Dish</h2>
                     <hr>
                     <div class="row">
                         <div class="col-sm-4">
-                            <form action="action_page.php">
+                            <form name="what">
                             <input type="text" name="keyword">
                             <button>search</button>
                         </div>
@@ -104,7 +104,7 @@
                   
                 </div>
 
-                <div class="showList">
+                <div id="showList">
                   
                 </div>
             </div>
@@ -204,11 +204,11 @@
 
 <!--page 3 top bar-->
 <div class="jumbotron" id="topBar" style="padding:0px;margin:0px;">
-    <div id="summeryHeading">
+    <div id="summaryHeading">
         <div class="table1">
             <div class="tableCell">
-                <div class="content">
-                    <h2>My Dinner: <span id="totalNum">4 </span> people</h2>
+                <div class="content" id="totalNum">
+                   
                 </div>
             </div>
         </div>
@@ -224,27 +224,11 @@
 
 
 <!--page 3.1 DinnerOverview-->
-    <div class="content" id="DinnerOverview">
+    <div class="content" id="dinnerOverview">
       <div class="row" >
           <div class="col-md-8 borderRight" id="dinnerAll"style="padding:10px; overflow:auto;height:300px" >
-              <div class="floating-box2 RightAlign">
-                      <div> 
-                          <img class="borderAll" src="./images/icecream.jpg" alt="icecream">
-                      </div>
-                      <div class="textMiddle">icecream
-                      </div>
-                      <div class="RightAlign" style="padding: 5px;">77.23 SEK
-                      </div>
-              </div>
-              <div class="floating-box2 RightAlign">
-                      <div> 
-                          <img class="borderAll" src="./images/icecream.jpg" alt="icecream">
-                      </div>
-                      <div class="textMiddle">icecream
-                      </div>
-                      <div class="RightAlign" style="padding: 5px;">77.23 SEK
-                      </div>
-              </div>
+
+
               <div class="floating-box2 RightAlign">
                       <div> 
                           <img class="borderAll" src="./images/icecream.jpg" alt="icecream">
@@ -255,39 +239,12 @@
                       </div>
               </div>
               
-              <div class="floating-box2 RightAlign">
-                      <div> 
-                          <img class="borderAll" src="./images/icecream.jpg" alt="icecream">
-                      </div>
-                      <div class="textMiddle">icecream
-                      </div>
-                      <div class="RightAlign" style="padding: 5px;">77.23 SEK
-                      </div>
-              </div>
-              <div class="floating-box2 RightAlign">
-                      <div> 
-                          <img class="borderAll" src="./images/icecream.jpg" alt="icecream">
-                      </div>
-                      <div class="textMiddle">icecream
-                      </div>
-                      <div class="RightAlign" style="padding: 5px;">77.23 SEK
-                      </div>
-              </div>
-              <div class="floating-box2 RightAlign">
-                      <div> 
-                          <img class="borderAll" src="./images/icecream.jpg" alt="icecream">
-                      </div>
-                      <div class="textMiddle">icecream
-                      </div>
-                      <div class="RightAlign" style="padding: 5px;">77.23 SEK
-                      </div>
-              </div>
 
               
               
           </div>
           <div class="col-md-4 bottomAlign1"style="padding-top:165px" >
-              <div class="bottomAlign2" id="printButton">
+              <div class="bottomAlign2" id="printPrice">
                   <h3>Totle:</p>
                   <h3>345.10 SEK</p>
               </div>
@@ -350,29 +307,6 @@
 
 
 
-
-    <!--- example
-        <ul class="nav nav-pills nav-stacked">
-            <li><a href="#section1">Dashboard</a></li>
-            <li><a href="#section2">Age</a></li>
-            <li><a href="#section3">Gender</a></li>
-            <li><a href="#section3">Geo</a></li>
-          </ul><br></div>
-
-
-        <div id="exampleView">
-            <div>
-                Number of guests: <span id="numberOfGuests"></span>
-            </div>
-            <div>
-          <button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
-                <button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
-            </div>
-        </div>
-    </div>
--->
-
-
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
  
@@ -381,12 +315,13 @@
 
     <!-- The application JavaScript code -->
      <script src="./app.js"></script>
-  <script src="./model/dinnerModel.js"></script>
+    <script src="./model/dinnerModel.js"></script>
     
     <script src="./view/interaction.js"></script>
     <script src="./view/sideNavView.js"></script>
     <script src="./view/searchArea.js"></script>
-    <script src="./view/summaryHeading.js"></script>
+    <script src="./view/topBar.js"></script>
+    <script src="./view/dinnerOverview.js"></script>
     
 </body>
 

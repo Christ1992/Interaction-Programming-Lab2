@@ -2,13 +2,13 @@
 function createnew() {
   $("#hover-div").hide();
   $("#SecondPage").show();
-  $("#SearchArea").show();
+  $("#searchArea").show();
   
 }
 
 /*ok*/
 function seedetail(){
-	$("#SearchArea").hide();
+	$("#searchArea").hide();
 	$("#detailView").show();
 
 	} 
@@ -16,7 +16,7 @@ function seedetail(){
 /*ok*/
 function backtoselect() {
   $("#detailView").hide();
-  $("#SearchArea").show();
+  $("#searchArea").show();
 
 }
 
@@ -24,14 +24,15 @@ function backtoselect() {
 function confirmdinner() {
 	$("#SecondPage").hide();
 	$("#topBar").show();
-	$("#DinnerOverview").show();
+	$("#dinnerOverview").show();
+	DinnerOverview("#dinnerOverview",model);
 	
 }	
 
 /*ok*/
 function confirmdish() {
 	  $("#SecondPage").show();
-	  $("#SearchArea").show();
+	  $("#searchArea").show();
 	  $("#detailView").hide();
 
 }
@@ -39,17 +40,17 @@ function confirmdish() {
 function editmenu() {
 	
 	$("#topBar").hide();
-	$("#DinnerOverview").hide();
+	$("#dinnerOverview").hide();
 	$("#DinnerPreparation").hide();
 	$("#SecondPage").show();
 	$("#searchArea").show();
-	$("#ShowList").show();
+	$("#showList").show();
 
 }
 
 /*ok*/
 function finalresult() {
-  $("#DinnerOverview").hide();
+  $("#dinnerOverview").hide();
   $("#DinnerPreparation").show();
   $("#topBar").show();
 

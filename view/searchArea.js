@@ -7,14 +7,15 @@ var SearchArea = function (container, model) {
 	var myDishes = model.getAllDishes(courseTemp);
     
     var html = "";
-    console.log(myDishes);
+
 	for (i = 0; i < myDishes.length; i++) { 
 		html += "<div class='floating-box' ><div><img onclick='seedetail();'class='borderAll' src='./images/"+myDishes[i].image
 					+"' alt='"+myDishes[i].name+"'></div><div class='textMiddle'>"+myDishes[i].name
 					+"</div><div style='padding: 5px;'>"+myDishes[i].description+"</div></div>";
     }
-	console.log(html);
-	$(".showList").html(html);
+	$("#showList").html(html);
+
+	console.log("html="+html);
 }
 
 function changevalue(){
